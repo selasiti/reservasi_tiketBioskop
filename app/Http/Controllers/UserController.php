@@ -14,4 +14,10 @@ class UserController extends Controller
         ];
         return view('user.index', $data);
     }
+    public function destroy($id)
+    {
+        $users = user::find($id);
+        $users ->delete();
+        return redirect()->route('user.index')->with('succes', $users -> name . "berhasil dihapus");
+    }
 }

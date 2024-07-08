@@ -68,7 +68,6 @@ class UserController extends Controller
     }
     $user->role_id = $request->input('role_id');
     $user->save();
-
-        return redirect()->route('user.index')->with('success', 'User berhasil diupdate');
+        return redirect()->route('user.index')->with('succes', $users -> name . "berhasil dihapus");
     }
 }

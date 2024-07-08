@@ -6,9 +6,11 @@
                 <div class="card flex flex-wrap justify-center bg-white rounded shadow-md p-4">
                     <div class="card-header">{{ __('Data user') }}</div>
                     <div class="card-body">
+
                         <button class="btn btn-base" onclick="location.href='{{ route('user.create') }}'">
                             Create Data
                         </button>
+
                     </div>
                     <table class="responsive-table w-full border">
                         <thead class="bg-gray-200 h-10">

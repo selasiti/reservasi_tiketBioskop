@@ -7,9 +7,9 @@
                     <div class="card-header">{{ __('Data user') }}</div>
                     <div class="card-body">
 
-                        <button class="btn btn-base" onclick="location.href='{{ route('user.create') }}'">
-                            Create Data
-                        </button>
+                    <a class="btn btn-base" href="{{ route('user.create') }}">
+               Create Data
+             </a>
 
                     </div>
                     <table class="responsive-table w-full border">
@@ -31,10 +31,9 @@
                                     <td class="border text-center">{{ $user->role_id }}</td>
                                     <td class="border text-center">
                                         <div class="flex gap-x-5 items-center justify-center">
-                                            <button class="btn btn-primary"
-                                                onclick="location.href='{{ route('user.edit', $user->id) }}'">
-                                                Edit
-                                            </button>
+                                        <a class="btn btn-primary" href="{{ route('user.edit', $user->id) }}">
+                                        Edit
+                                        </a>
                                             <form action="{{ route('user.destroy', $user->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')

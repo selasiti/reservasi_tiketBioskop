@@ -38,8 +38,8 @@
                                             <form action="{{ route('user.destroy', $user->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Hapus data ini ?')"
-                                                    class="btn btn-danger">delete</button>
+                                                <button type="submit" onclick="return confirm('Hapus data ini ?');"
+                                                    class="btn btn-danger">Delete</button>
                                             </form>
                                         </div>
                                     </td>
@@ -50,6 +50,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

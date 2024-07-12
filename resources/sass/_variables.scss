@@ -1,5 +1,6 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #8ea4ba;
+ 
 
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
@@ -15,7 +16,7 @@ $line-height-base: 1.6;
 .form-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 0.375rem;
     padding: 2.5rem; // p-10 equivalent
@@ -38,7 +39,7 @@ $line-height-base: 1.6;
 
     a {
         text-transform: capitalize;
-        color: #007bff;
+        color: #313c59;
         text-decoration: none;
 
         &:hover {
@@ -83,7 +84,7 @@ $line-height-base: 1.6;
         justify-content: flex-end;
 
         button {
-            background-color: #2d3748; // bg-gray-800 equivalent
+            background-color: #bbc6da; // bg-gray-800 equivalent
             color: #fff;
             padding: 0.5rem; // px-2 py-3 equivalent
             width: 10rem; // w-40 equivalent
@@ -117,11 +118,11 @@ $line-height-base: 1.6;
     tbody {
         tr {
             &:nth-child(even) {
-                background-color: #f9fafb; // Light background for even rows if desired
+                background-color: #b2b7bc; // Light background for even rows if desired
             }
 
             &:nth-child(odd) {
-                background-color: #fff; // White background for odd rows
+                background-color: #aa9c9c; // White background for odd rows
             }
         }
     }

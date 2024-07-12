@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ManajemenFilmController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $manajemenFilms = ManajemenFilm::all();

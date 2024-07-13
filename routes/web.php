@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ManajemenFilmController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,7 +11,6 @@ Route::get('/', function () {
 })->name('home');
 
 // Rute untuk CRUD manajemen film
-Route::resource('manajemenFilms', ManajemenFilmController::class);
 Route::resource('user', UserController::class);
 Auth::routes();
 

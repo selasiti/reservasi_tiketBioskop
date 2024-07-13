@@ -1,22 +1,10 @@
 <?php
 
+use App\Http\Controllers\DaftarFilmController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ManajemenFilmController;
-use App\Http\Controllers\UserController;
 
-// Rute untuk halaman utama aplikasi
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Rute khusus untuk `manajemenFilm`
-Route::get('/Film', function () {
-    return view('manajemenFilm');
-});
-
-// Rute untuk CRUD manajemen film
-Route::resource('manajemenFilms', ManajemenFilmController::class);
-Route::resource('user', UserController::class);
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('daftarfilm', DaftarFilmController::class);

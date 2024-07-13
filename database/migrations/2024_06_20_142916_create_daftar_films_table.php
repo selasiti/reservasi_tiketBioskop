@@ -4,19 +4,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateDaftarFilmsTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('manajemen_films', function (Blueprint $table) {
+        Schema::create('daftar_films', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
             $table->string('title');
-            $table->text('descrption');
-            $table->string('director');
-            $table->integer('year');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('manajemen_films');
+        Schema::dropIfExists('daftar_films');
     }
 };

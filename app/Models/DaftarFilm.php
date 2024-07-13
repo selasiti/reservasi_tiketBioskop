@@ -5,16 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class manajemenFilm extends Model
+class DaftarFilm extends Model
 {
     use HasFactory;
 
-    protected $table = 'manajemenFilms';
-
-    protected $fillable =[
+    /**
+     * fillable
+     * 
+     *  @var array
+     */
+    protected $fillable = [
+        'image',
         'title',
-        'description',
-        'director',
-         'year',
+        'description'
+        
     ];
 }

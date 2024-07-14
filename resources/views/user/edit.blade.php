@@ -63,16 +63,14 @@
                         <span><sup>*</sup></span> Role
                     </label>
                     <div class="input-container">
-                        <select name="role_id" id="role_id" class="border py-2 px-1">
-                            <option value="">Pilih Role</option>
-                            @foreach ($roles as $role)
-                                <option value="{{ $role->id }}" {{ $user->role_id == $role->id ? 'selected' : '' }}>
-                                    {{ $role->role }}</option>
-                            @endforeach
-                        </select>
-                        @error('role_id')
-                            <span class="invalid">{{ $message }}</span>
-                        @enderror
+                        <select name="role_id" id="role_id">
+                            <option value="">Tentuksn Role</option>
+                            <option value="1">Admin</option>>
+                            <option value="2">User</option>
+                </select>
+                @error('role_id')
+                <span class="invalid">{{ $message }}</span>
+                @enderror
                     </div>
                 </div>
 

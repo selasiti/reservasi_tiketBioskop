@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class TiketController extends Controller
 {
+
     public function index()
     {
         $tiket = Tiket::all();
@@ -68,4 +69,9 @@ class TiketController extends Controller
         $tiket->delete();
         return redirect()->route('tiket.index');
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 }

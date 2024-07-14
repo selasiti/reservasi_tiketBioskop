@@ -3,12 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
+
 use Illuminate\Support\Facades\Auth;
 
 // Rute untuk halaman utama aplikasi
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
 
 Route::resource('user', UserController::class);
 Route::resource('tiket', TiketController::class);
